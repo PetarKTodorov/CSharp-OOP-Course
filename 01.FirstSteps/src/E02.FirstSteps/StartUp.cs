@@ -1,4 +1,4 @@
-﻿namespace _01.FirstSteps
+﻿namespace E02.FirstSteps
 {
     using System;
 
@@ -12,7 +12,7 @@
 
             Person person3 = new Person("st. 3", 19);
 
-            person3.Address = "sds";
+            person3.Address = "new Address";
 
             Console.WriteLine(person2.Address);
         }

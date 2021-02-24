@@ -1,14 +1,12 @@
-﻿namespace _01.FirstSteps
+﻿namespace E02.FirstSteps
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     public class Child : Person
     {
         public Child()
         {
-            
+            this.Age = 14;
         }
     }
 }

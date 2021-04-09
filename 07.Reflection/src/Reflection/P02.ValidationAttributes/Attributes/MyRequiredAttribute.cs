@@ -4,7 +4,9 @@
     {
         public override bool isValid(object obj)
         {
-            if (obj == null)
+            bool isNotNull = obj == null;
+
+            if (isNotNull)
             {
                 return false;
             }

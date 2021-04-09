@@ -9,7 +9,7 @@
     {
         public static void Run()
         {
-            var person = new Person(null, -1);
+            var person = new Person("Gosho", 16);
 
             bool isValidEntity = Validator.IsValid(person);
 

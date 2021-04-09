@@ -5,7 +5,7 @@
 
     public class StartUp
     {
-        public static void Main()
+        internal static void Main()
         {
             ICommandInterpreter command = new CommandInterpreter();
             IEngine engine = new Engine(command);

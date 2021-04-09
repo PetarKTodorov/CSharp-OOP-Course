@@ -16,7 +16,8 @@
         {
             int value = Convert.ToInt32(obj);
 
-            if (value < minValue || value > maxValue)
+            bool isValid = value < minValue || value > maxValue;
+            if (isValid)
             {
                 return false;
             }

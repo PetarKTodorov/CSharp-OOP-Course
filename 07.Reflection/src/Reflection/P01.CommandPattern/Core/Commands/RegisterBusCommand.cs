@@ -2,15 +2,11 @@
 {
     using P01.CommandPattern.Core.Interfaces;
 
-    class HelloCommand : ICommand
+    public class RegisterBusCommand : ICommand
     {
         public string Execute(string[] args)
         {
-            string name = args[0];
-
-            string result = $"Hi {name}";
-
-            return result;
+            return "Register Bus";
         }
     }
 }

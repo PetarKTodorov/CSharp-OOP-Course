@@ -12,8 +12,21 @@
     {
         public IInstrument CreateInstrument(string type)
         {
-            // TODO: write reflection
-            return null;
+            var instrumentType = Assembly.GetCallingAssembly()
+                .GetTypes()
+                .Where(t => typeof(IInstrument).IsAssignableFrom(t))
+                .FirstOrDefault(t => t.Name == type);
+
+            if (instrumentType == null)
+            {
+                string error = string.Format(ErrorMessages.InvalideInstrument, type);
+
+                throw new ArgumentException(error);
+            }
+
+            IInstrument instrument = (IInstrument)Activator.CreateInstance(instrumentType);
+
+            return instrument;
         }
     }
 }
